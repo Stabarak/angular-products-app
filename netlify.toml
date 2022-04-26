@@ -1,5 +1,4 @@
 [[redirects]]
-  from = "https://stabarak.netlify.app"
-  to = "https://stabarak-angular-routing.netlify.app/"
-  status = 301
-  force = true
+  from = "/*"
+  to = "/index.html"
+  status = 200
