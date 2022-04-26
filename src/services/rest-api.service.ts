@@ -4,8 +4,9 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class RestAPIService {
-  readonly Hello = 'Hey';
   readonly baseUrl = 'https://fakestoreapi.com';
+  readonly cartItems: any[] = [];
+
   constructor(private http: HttpClient) {}
 
   getCategories(): Observable<any> {

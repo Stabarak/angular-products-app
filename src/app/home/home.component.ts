@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit {
   constructor(private rest: RestAPIService) {}
 
   ngOnInit(): void {
-    console.log(this.rest.Hello);
     this.rest.getCategories().subscribe((res) => (this.categoriesList = res));
+    this.getProductsList('jewelery');
   }
 
   getProductsList(categoryName: string): void {

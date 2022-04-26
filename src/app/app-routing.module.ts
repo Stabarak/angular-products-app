@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CartComponent } from './cart/cart.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {
@@ -10,17 +10,13 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'cart',
-    component: CartComponent,
+    path: 'product/:id',
+    component: ProductComponent,
   },
   {
-    path: 'profile',
-    component: ProfileComponent,
+    path: '**',
+    component: NotFoundComponent,
   },
-  // {
-  //   // path: '**',
-  //   // component: 404
-  // },
 ];
 
 @NgModule({

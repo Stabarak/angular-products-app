@@ -1,0 +1,33 @@
+@import "index";
+
+.productCardGroup {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  padding-inline: 1rem;
+}
+.product_card {
+  max-width: 200px;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid $black;
+  @include flex_start_center;
+  flex-direction: column;
+  img {
+    max-width: 100%;
+    max-height: 150px;
+    height: 100%;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.3;
+  }
+  &:hover {
+    border-width: 2px;
+    cursor: pointer;
+  }
+}

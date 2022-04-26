@@ -1,0 +1,15 @@
+<div class="productCardGroup">
+  <div
+    *ngFor="let product of products"
+    class="product_card"
+    routerLink="/product/{{ product.id }}"
+  >
+    <img
+      [src]="product.image"
+      [alt]="product.title"
+      width="100%"
+      height="auto"
+    />
+    <p>{{ product.title }}</p>
+  </div>
+</div>

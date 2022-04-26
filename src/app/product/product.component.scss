@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  img {
+    max-width: 200px;
+    margin: 1rem;
+  }
+  .infoWrapper {
+    padding: 1.5rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+    h4 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    button {
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      height: fit-content;
+      &:hover {
+        transform: scale(1.05);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="container">
+  <img [src]="product.image" [alt]="product.title" width="100%" height="auto" />
+  <div class="infoWrapper">
+    <h2>{{ product.title }}</h2>
+    <h4>${{ product.price }}</h4>
+    <button (click)="onAddToCart()">Add to Cart</button>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+h1 {
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  text-align: center;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

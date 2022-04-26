@@ -4,23 +4,25 @@ import { RestAPIService } from 'src/services/rest-api.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartComponent } from './cart/cart.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProductComponent } from './product/product.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from 'src/components/navbar/navbar.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
+import { ProductCardComponent } from 'src/components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CartComponent,
-    ProfileComponent,
+    NotFoundComponent,
+    ProductComponent,
     NavbarComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
