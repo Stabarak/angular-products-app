@@ -1,0 +1,30 @@
+<header>
+  <nav>
+    <div class="brand">
+      <img
+        src="https://i.pinimg.com/originals/3d/59/d8/3d59d8f82ca91378d6108c5fa33805f4.png"
+        alt="brand logo"
+        height="auto"
+        width="60px"
+      />
+    </div>
+    <div class="searchWrapper" *ngIf="productsList">
+      <input list="products" name="productsList" id="productsList" />
+      <mat-icon class="matIcon" (click)="onSearchClick()">search</mat-icon>
+      <datalist id="products">
+        <option
+          *ngFor="let product of productsList"
+          [value]="product.title"
+        ></option>
+      </datalist>
+    </div>
+    <div class="profileWrapper">
+      <img
+        src="https://th.bing.com/th/id/R.c3631c652abe1185b1874da24af0b7c7?rik=XBP%2fc%2fsPy7r3HQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-user-icon-circled-user-icon-2240.png&ehk=z4ciEVsNoCZtWiFvQQ0k4C3KTQ6wt%2biSysxPKZHGrCc%3d&risl=&pid=ImgRaw&r=0"
+        alt="user profile icon"
+        height="auto"
+        width="60px"
+      />
+    </div>
+  </nav>
+</header>

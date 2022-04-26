@@ -1,0 +1,37 @@
+@import "index";
+
+header {
+  display: block;
+  background-color: $black;
+  nav {
+    @include flex_center;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+  }
+}
+.brand {
+  img {
+    max-width: 100%;
+  }
+}
+.searchWrapper {
+  max-width: 40%;
+  position: relative;
+  .matIcon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  input {
+    height: 2.5rem;
+    width: 400px;
+    padding-left: 2.25rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,1 +1,32 @@
-<p>Home Component</p>
+<mat-radio-group aria-label="Select an option" class="cardGroup">
+  <div *ngFor="let item of categoriesList" class="card">
+    <label>
+      <div class="border-box">
+        <div class="techName">
+          {{ item }}
+        </div>
+      </div>
+      <mat-radio-button
+        class="hidden_button"
+        [value]="item"
+        (change)="getProductsList(item)"
+      ></mat-radio-button>
+    </label>
+  </div>
+</mat-radio-group>
+
+<div *ngIf="productsList" class="cardGroup">
+  <div *ngFor="let product of productsList" class="product_card">
+    <div class="border-box">
+      <div class="techName">
+        <img
+          [src]="product.image"
+          [alt]="product.title"
+          width="100%"
+          height="auto"
+        />
+        <p>{{ product.title }}</p>
+      </div>
+    </div>
+  </div>
+</div>
