@@ -1,11 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class RestAPIService {
   readonly baseUrl = 'https://fakestoreapi.com';
   readonly cartItems: any[] = [];
+
+  public cartCounter = new Subject<number>();
+  public cartCounter$ = this.cartCounter.asObservable();
 
   constructor(private http: HttpClient) {}
 

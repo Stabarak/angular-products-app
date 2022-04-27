@@ -5,26 +5,37 @@
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
-  padding-inline: 1rem;
 }
 .product_card {
   max-width: 200px;
   width: 100%;
-  padding: 1.5rem;
   margin: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid $black;
+  border: 1px solid $silver;
   @include flex_start_center;
   flex-direction: column;
   img {
     max-width: 100%;
-    max-height: 150px;
+    max-height: 200px;
     height: 100%;
+    padding: 1rem;
+  }
+  .titleWrapper {
+    padding: 0.75rem 1.5rem;
+    background-color: $orange;
+    color: $black;
+    border-radius: 0.5rem;
   }
   p {
-    margin-top: 1rem;
     font-size: 0.875rem;
     line-height: 1.3;
+    flex: 1;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   &:hover {
     border-width: 2px;

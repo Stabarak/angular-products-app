@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="product">
   <img [src]="product.image" [alt]="product.title" width="100%" height="auto" />
   <div class="infoWrapper">
     <h2>{{ product.title }}</h2>

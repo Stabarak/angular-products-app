@@ -16,6 +16,5 @@ export class AppComponent implements OnInit {
     this.rest.getAllProducts().subscribe((res) => {
       this.productsList = res;
     });
-    console.log(this.productsList);
   }
 }

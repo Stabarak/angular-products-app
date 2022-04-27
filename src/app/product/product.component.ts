@@ -9,6 +9,7 @@ import { RestAPIService } from 'src/services/rest-api.service';
 })
 export class ProductComponent implements OnInit {
   id: number = 0;
+  counter: number = 0;
   product: any;
   constructor(private router: ActivatedRoute, private rest: RestAPIService) {}
   ngOnInit(): void {
@@ -19,6 +20,9 @@ export class ProductComponent implements OnInit {
   }
 
   onAddToCart(): void {
-    this.rest.cartItems.push({ [this.id]: this.product });
+    this.rest.cartCounter$.subscribe((count) => {
+      this.counter = count;
+    });
+    this.rest.cartCounter.next(this.counter + 1);
   }
 }

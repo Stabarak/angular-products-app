@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
   }
 
   getProductsList(categoryName: string): void {
-    console.log({ categoryName });
     this.rest
       .getProductsList(categoryName)
       .subscribe((res) => (this.productsList = res));
