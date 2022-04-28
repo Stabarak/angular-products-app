@@ -1,16 +1,34 @@
 @mixin flex_center {
-  display: flex;
+  @include flex_ai_center;
   justify-content: space-between;
-  align-items: center;
 }
 
 @mixin flex_start_center {
-  display: flex;
-  justify-content: start;
+  @include flex_start;
   align-items: center;
+}
+
+@mixin flex_start {
+  display: flex;
+  justify-content: flex-start;
 }
 
 @mixin flex_evenly {
   display: flex;
   justify-content: space-evenly;
+}
+
+@mixin flex_center_end {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@mixin flex_ai_center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin font($size: 1rem, $lineHeigh: 1.4, $weight: 400) {
+  font: $weight $size $font;
 }

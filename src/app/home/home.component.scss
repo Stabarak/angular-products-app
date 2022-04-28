@@ -1,18 +1,18 @@
 @import "index";
 
 .cardGroup {
-  @include flex_evenly;
+  @include flex_start;
   max-width: 80%;
   margin: 2rem auto;
   flex-wrap: wrap;
 }
 .card {
-  margin: 1rem;
+  margin: 0.5rem 1rem;
   .border-box {
     border-radius: 0.5rem;
     @include flex_center;
     border: 1px solid $black;
-    padding: 1.5rem;
+    padding: 1rem;
     cursor: pointer;
     .techName {
       text-transform: capitalize;

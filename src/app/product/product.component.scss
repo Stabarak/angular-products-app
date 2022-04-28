@@ -1,7 +1,8 @@
+@import "index";
+
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  @include flex_start_center;
+  padding: 2rem 5%;
   img {
     max-width: 200px;
     margin: 1rem;
@@ -11,9 +12,26 @@
     h2 {
       font-size: 1.5rem;
     }
-    h4 {
-      font-size: 1rem;
-      font-weight: bold;
+    .rating {
+      @include font(1.25rem, 1.3, 400);
+      @include flex_ai_center;
+      .badge {
+        background-color: $orange;
+        border-radius: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        @include font(1.125rem, 1.4, 500);
+        @include flex_ai_center;
+        margin-right: 0.5rem;
+        .ratingIcon {
+          font-size: 1.25rem;
+          margin-left: 0.25rem;
+          height: 22px;
+        }
+      }
+    }
+    .price {
+      @include font(1.5rem, 1, 700);
+      color: $orange;
     }
     button {
       padding: 1.5rem;
@@ -22,11 +40,20 @@
       outline: none;
       cursor: pointer;
       height: fit-content;
+      @include font(1rem, 1.4, 500);
       &:hover {
         transform: scale(1.05);
       }
       &:active {
         transform: scale(0.9);
+      }
+    }
+  }
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    .infoWrapper {
+      button {
+        width: 100%;
       }
     }
   }

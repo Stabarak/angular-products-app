@@ -9,6 +9,7 @@ import { RestAPIService } from 'src/services/rest-api.service';
 export class NavbarComponent implements OnInit {
   @Input() productsList: any;
   cartCount: number = 0;
+  showMobileNav = false;
 
   constructor(private rest: RestAPIService) {}
   ngOnInit(): void {
@@ -17,5 +18,9 @@ export class NavbarComponent implements OnInit {
 
   onSearchClick(): void {
     document.getElementById('productsList')?.focus();
+  }
+
+  onHamburgerClick(): void {
+    this.showMobileNav = !this.showMobileNav;
   }
 }

@@ -2,7 +2,14 @@
   <img [src]="product.image" [alt]="product.title" width="100%" height="auto" />
   <div class="infoWrapper">
     <h2>{{ product.title }}</h2>
-    <h4>${{ product.price }}</h4>
+    <h4 class="rating">
+      <span class="badge">
+        {{ product.rating.rate }}
+        <mat-icon class="ratingIcon">star</mat-icon>
+      </span>
+      {{ product.rating.count }} Ratings
+    </h4>
+    <h3 class="price">${{ product.price }}</h3>
     <button (click)="onAddToCart()">Add to Cart</button>
   </div>
 </div>
